@@ -1,8 +1,9 @@
 package com.example.orderservice.dto;
 
-import com.example.orderservice.model.OrderLineItems;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
-public record OrderRequest(List<OrderLineItemsRequest> orderLineItemsList) {
+public record OrderRequest(@NotNull(message = "Cannot be null") List<OrderLineItemsRequest> orderLineItemsList) {
+
 }
